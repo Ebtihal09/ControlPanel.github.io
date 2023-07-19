@@ -1,8 +1,6 @@
 # Web-page-to-control-the-direction-of-robot-movement
 The first task in Web Programming and NLP for the Smart Methods Summer training 2023 is a web page that acts as a control panel for the robot movement.
 
-## There are 3 files:
-
 ### The first file is control_panel.html
 The control panel consists of five buttons, 4 of which control the direction to the right, left, forward and backward, and the fifth to stop.
 The file contains the Embedded style for the page.
