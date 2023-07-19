@@ -3,7 +3,7 @@ The first task in Web Programming and NLP for the Smart Methods Summer training 
 
 ## There are 3 files:
 
-### The first file, the html file
+### The first file is control_panel.html
 The control panel consists of five buttons, 4 of which control the direction to the right, left, forward and backward, and the fifth to stop.
 The file contains the Embedded style for the page.
 
