@@ -7,5 +7,5 @@ It contains HTML,JS, and CSS code to draw the robot's movement path, where drawi
 
 ### save_distance.php file
 It contains a php code that stores the distance when the buttons are pressed.
-<img width="960" alt="02" src="https://github.com/Ebtihal09/Web-page-to-control-the-direction-of-robot-movement/assets/124944456/e59c038f-2404-45eb-854d-d94500b8330c">
+![image](https://github.com/Ebtihal09/Web-page-to-control-the-direction-of-robot-movement/assets/124944456/bf8ec590-98ae-4554-9ff8-d2dc05383486)
 
