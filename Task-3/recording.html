@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Speech to text</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <style>
+        body {
+            background-color: #f0f0f0;
+            flex-direction: column;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            }
+        button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            }
+        button:hover {
+            background-color: #0056b3;
+        }
+        h3 {
+            margin: 20px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            width: 60%;
+            text-align: center;
+            font-weight: normal;
+            }
+    </style>
+
+</head>
+<body>
+    <button onclick="runSpeechRecog()"> Speech </button>
+    <h3 id="output" class="hide"></h3>
+    <script>
+        runSpeechRecog = () => {
+        var output = document.getElementById('output');
+        
+        let recognization = new webkitSpeechRecognition();
+        recognization.lang = 'en-US';
+
+        recognization.onresult = (e) => {
+           var transcript = e.results[0][0].transcript;
+           output.innerHTML = transcript;
+           output.classList.remove("hide")
+           
+        // Send the transcript to the server
+           $.ajax({
+            url: 'save_transcript.php',
+            type: 'POST',
+            data: {
+                transcript: transcript
+            }
+        });
+        }
+        recognization.start();
+     }
+  </script>
+</body>
+</html>
